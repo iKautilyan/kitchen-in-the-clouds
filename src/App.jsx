@@ -124,22 +124,43 @@ export default function App() {
 
   return (
     <div style={styles.app}>
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .card {
+              flex-direction: column !important;
+              text-align: center;
+            }
+            .image {
+              width: 100% !important;
+              height: 200px !important;
+            }
+            .container {
+              padding: 10px !important;
+            }
+            .header {
+              padding: 15px !important;
+              font-size: 18px !important;
+            }
+          }
+        `}
+      </style>
       
       {/* HEADER */}
-      <div style={styles.header}>
+      <div style={styles.header} className="header">
         🍔 Kitchen in the Clouds 🍔
       </div>
 
-      <div style={styles.container}>
+      <div style={styles.container} className="container">
         <h2 style={styles.sectionTitle}>Menu</h2>
         <h2 style={styles.sectionTitle}>the sandwiches will be ready and available for pickup or delivery by saturday (4th April) 10am</h2>
         {menu.map((item) => {
           const displayPrice = getItemPrice(item);
 
           return (
-            <div key={item.id} style={styles.card}>
+            <div key={item.id} style={styles.card} className="card">
               
-              <img src={item.image} alt="" style={styles.image} />
+              <img src={item.image} alt="" style={styles.image} className="image" />
 
               <div style={{ flex: 1 }}>
                 <h3 style={styles.title}>{item.name}</h3>
