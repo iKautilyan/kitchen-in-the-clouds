@@ -132,7 +132,7 @@ export default function App() {
 
       <div style={styles.container}>
         <h2 style={styles.sectionTitle}>Menu</h2>
-        <h2 style={styles.sectionTitle}>the sandwiches will be ready and awailable for pickup or delivery by saturday (4th April) 10am</h2>
+        <h2 style={styles.sectionTitle}>the sandwiches will be ready and available for pickup or delivery by saturday (4th April) 10am</h2>
         {menu.map((item) => {
           const displayPrice = getItemPrice(item);
 
