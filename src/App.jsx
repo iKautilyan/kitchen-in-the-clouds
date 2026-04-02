@@ -6,8 +6,9 @@ export default function App() {
       id: 1,
       name: "Pulled Chicken Sandwich",
       price: 180,
-      image: "https://via.placeholder.com/300x200",
+      image: "https://res.cloudinary.com/dsfwojehd/image/upload/f_auto,q_auto/Golden_pulled_chicken_sandwich_on_sourdough_ijwh8j",
       addons: [
+        { name: "Sliced Tomatoes", price: 0 },
         { name: "Bacon", price: 50 },
         { name: "Shitake Mushrooms", price: 60 }
       ]
@@ -16,13 +17,7 @@ export default function App() {
       id: 2,
       name: "Fries",
       price: 100,
-      image: "https://via.placeholder.com/300x200"
-    }
-    {
-      id: 3,
-      name: "Sliced Tomatoes",
-      price: 0,
-      image: "https://via.placeholder.com/300x200"
+      image: "https://res.cloudinary.com/dsfwojehd/image/upload/v1775122860/Golden_fries_in_parchment_paper_jnw3ee.png"
     }
   ];
 
@@ -166,7 +161,7 @@ export default function App() {
           return (
             <div key={item.id} style={styles.card} className="card">
               
-              {/* <img src={item.image} alt="" style={styles.image} className="image" /> */}
+              <img src={item.image} alt="" style={styles.image} className="image" />
 
               <div style={{ flex: 1 }}>
                 <h3 style={styles.title}>{item.name}</h3>
