@@ -18,6 +18,12 @@ export default function App() {
       price: 100,
       image: "https://via.placeholder.com/300x200"
     }
+    {
+      id: 3,
+      name: "Sliced Tomatoes",
+      price: 0,
+      image: "https://via.placeholder.com/300x200"
+    }
   ];
 
   const [selectedAddons, setSelectedAddons] = useState({});
@@ -160,7 +166,7 @@ export default function App() {
           return (
             <div key={item.id} style={styles.card} className="card">
               
-              <img src={item.image} alt="" style={styles.image} className="image" />
+              {/* <img src={item.image} alt="" style={styles.image} className="image" /> */}
 
               <div style={{ flex: 1 }}>
                 <h3 style={styles.title}>{item.name}</h3>
